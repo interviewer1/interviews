@@ -78,6 +78,7 @@ Outputs:
   Website:
     Description: The Public DNS for the EC2 Instance
     Value: !Sub 'http://${EC2Instance.PublicDnsName}'
-  Foo:
-    Description: Foo
-    Value: !GetAtt: PublicDNSName
+  WebsiteIp:
+    Description: The Public Website url using the IP instead of DNS.
+    Value: !GetAtt: PublicIp
+
